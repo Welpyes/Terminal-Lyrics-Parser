@@ -19,7 +19,7 @@ A Python script to display synchronized lyrics for songs played in MPRIS-complia
 - **Python 3+**: Required to run the script.
 - **dbus-python**: For interacting with MPRIS media players.
 - **MPRIS-compliant media player**: E.g., Rhythmbox, VLC, Clementine, Spotify.
-- **Termux (optional)**: For Android usage, requires `termux-api` for D-Bus support.
+- **Termux (optional)**: For Android usage, requires `termux-api` for D-Bus support. **You need to be in an X11 Desktop for this to work**
 
 ## Installation
 
@@ -28,11 +28,14 @@ A Python script to display synchronized lyrics for songs played in MPRIS-complia
 ```bash
 pkg install python
 pkg install dbus-python
+pkg install dbus
 ```
 3. Ensure a media player is installed (e.g., Rhythmbox via `pkg install rhythmbox` if available).
-4. Save the script as `lrc.py` and make it executable:
+4. Installation
 ```bash
-chmod +x lrc.py
+git clone https://github.com/Welpyes/Terminal-Lyrics-Parser
+cd Terminal-Lyrics-Parser
+./lrc.py
 ```
 
 ### On Linux Distributions (Ubuntu, Fedora, Arch, etc.)
