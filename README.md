@@ -41,18 +41,18 @@ python3 lrc.py
    - Ubuntu:
 ```bash
 sudo apt update
-sudo apt install python3 python3-pip
-pip3 install dbus-python ncurses
+sudo apt install python3 python3-pip ncurses
+pip3 install dbus-python 
 ```
    - Fedora:
 ```bash
-sudo dnf install python3 python3-pip
-pip3 install dbus-python ncruses
+sudo dnf install python3 python3-pip ncurses 
+pip3 install dbus-python 
 ```
    - Arch:
 ```bash
-sudo pacman -S python python-pip
-pip3 install dbus-python ncurses
+sudo pacman -S python python-pip ncurses
+pip3 install dbus-python 
 ```
 2. Install a compatible media player (e.g., Rhythmbox, VLC):
    - Ubuntu: `sudo apt install rhythmbox vlc`
