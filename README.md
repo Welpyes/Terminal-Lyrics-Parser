@@ -15,6 +15,7 @@ I made this script in my free time and i was drunk so yeah :pepelaugh:
 - **Python 3+**: Required to run the script.
 - **dbus-python**: For interacting with MPRIS media players.
 - **MPRIS-compliant media player**: E.g., Rhythmbox, VLC, Clementine, Spotify.
+- **Ncurses**: For rendering the user-interface
 - **Termux (optional)**: For Android usage, requires `termux-api` for D-Bus support. **You need to be in an X11 Desktop for this to work**
 
 ## Installation
@@ -22,9 +23,7 @@ I made this script in my free time and i was drunk so yeah :pepelaugh:
 ### On Termux
 1. Install dependencies:
 ```bash
-pkg install python
-pkg install dbus-python
-pkg install dbus
+pkg install python dbus-python ncurses dbus
 ```
 3. Ensure a media player is installed (e.g., Rhythmbox via `pkg install rhythmbox` if available).
 4. Installation
@@ -43,17 +42,17 @@ cd Terminal-Lyrics-Parser
 ```bash
 sudo apt update
 sudo apt install python3 python3-pip
-pip3 install dbus-python
+pip3 install dbus-python ncurses
 ```
    - Fedora:
 ```bash
 sudo dnf install python3 python3-pip
-pip3 install dbus-python
+pip3 install dbus-python ncruses
 ```
    - Arch:
 ```bash
 sudo pacman -S python python-pip
-pip3 install dbus-python
+pip3 install dbus-python ncurses
 ```
 2. Install a compatible media player (e.g., Rhythmbox, VLC):
    - Ubuntu: `sudo apt install rhythmbox vlc`
