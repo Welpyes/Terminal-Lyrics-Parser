@@ -30,7 +30,7 @@ pkg install python dbus-python ncurses dbus
 ```bash
 git clone https://github.com/Welpyes/Terminal-Lyrics-Parser
 cd Terminal-Lyrics-Parser
-./lrc.py
+puthon3 lrc.py
 ```
 
 ### On Linux Distributions (Ubuntu, Fedora, Arch, etc.)
@@ -64,7 +64,7 @@ pip3 install dbus-python ncurses
 1. Place `.lrc` files in the same directory as your music files or specify a custom lyrics directory with the `-l` flag.
 2. Run the script:
 ```bash
-./lrc.py
+python3 lrc.py
 ```
 3. Play a song in an compatible player. The script displays lyrics synchronized with playback, with a status bar at the bottom.
 4. Press `Ctrl+C` to exit.
