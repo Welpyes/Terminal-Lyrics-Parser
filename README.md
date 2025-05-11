@@ -7,15 +7,9 @@ I made this script in my free time and i was drunk so yeah :pepelaugh:
 ## Features
 - Displays lyrics synchronized with song playback using `.lrc` files.
 - Supports multiple MPRIS-compliant players (Rhythmbox, VLC, Spotify, etc.).
-- Smart line wrapping at word boundaries to fit terminal width.
 - Customizable scroll offset (default: current line 3rd from top).
 - Status bar with song title, artist, and playback position/duration.
 - Configurable via command-line flags (e.g., lyrics directory, player, offset).
-- Cross-platform: Works on Termux and common Linux distributions (Ubuntu, Fedora, Arch).
-- Clears screen between songs for clean transitions.
-- Minimizes flickering with partial screen redraws.
-- Handles missing lyrics gracefully without exiting.
-- Saves timestamps and cleaned lyrics to cache files.
 
 ## Dependencies
 - **Python 3+**: Required to run the script.
@@ -42,7 +36,7 @@ cd Terminal-Lyrics-Parser
 
 ### On Linux Distributions (Ubuntu, Fedora, Arch, etc.)
 1. Install dependencies:
-<br>
+<br> 
 </br>
 
    - Ubuntu:
@@ -61,7 +55,7 @@ pip3 install dbus-python
 sudo pacman -S python python-pip
 pip3 install dbus-python
 ```
-2. Install an MPRIS-compliant media player (e.g., Rhythmbox, VLC):
+2. Install a compatible media player (e.g., Rhythmbox, VLC):
    - Ubuntu: `sudo apt install rhythmbox vlc`
    - Fedora: `sudo dnf install rhythmbox vlc`
    - Arch: `sudo pacman -S rhythmbox vlc`
@@ -73,7 +67,7 @@ pip3 install dbus-python
 ```bash
 ./lrc.py
 ```
-3. Play a song in an MPRIS-compliant player. The script displays lyrics synchronized with playback, with a status bar at the bottom.
+3. Play a song in an compatible player. The script displays lyrics synchronized with playback, with a status bar at the bottom.
 4. Press `Ctrl+C` to exit.
 
 ### Command-Line Flags
@@ -122,7 +116,8 @@ options:
 ```
 
 ## Notes
-- **Lyrics Files**: `.lrc` files must have the same base name as the song file (e.g., `song.mp3` → `song.lrc`). Supports `[offset:±ms]` for timing adjustments.
+- **May Not Support Your Music Player**: Your music player might not be compatible with this script. It only supports MPRIS based media players
+- **Lyrics Files**: `.lrc` files must have the same base name as the song file (e.g., `song.mp3` -> `song.lrc`). Supports `[offset:±ms]` for timing adjustments.
 - **Cache Files**: Timestamps are saved to `lyrics_timestamps.txt` and cleaned lyrics to `lyrics.tmp` in the cache directory (default: `~/.cache`).
 - **Termux**: Ensure `termux-api` is installed for D-Bus support. Lyrics can be stored on `/sdcard` with `-l /sdcard/Lyrics`.
 
@@ -130,9 +125,3 @@ options:
   - Check terminal size: `tput lines; tput cols`.
   - Verify D-Bus: `dbus-send --print-reply --dest=org.mpris.MediaPlayer2.rhythmbox /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata'`.
   - Ensure `.lrc` files are accessible: `ls /path/to/song.lrc`.
-
-## Contributing
-Feel free to submit issues or pull requests for additional features (e.g., new flags, player support) or bug fixes.
-
-## License
-MIT License
