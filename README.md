@@ -1,6 +1,8 @@
 # Terminal Lyrics Parser
 
-A Python script to display synchronized lyrics for songs played in MPRIS-compliant media players (e.g., Rhythmbox, VLC, Clementine, Spotify) in a terminal using `curses`. Supports `.lrc` files, smart line wrapping, customizable scrolling, and a status bar with song metadata.
+A Python script to display synchronized lyrics
+<br>
+I made this script in my free time and i was drunk so yeah :pepelaugh:
 
 ## Features
 - Displays lyrics synchronized with song playback using `.lrc` files.
