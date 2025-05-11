@@ -30,7 +30,7 @@ pkg install python dbus-python ncurses dbus
 ```bash
 git clone https://github.com/Welpyes/Terminal-Lyrics-Parser
 cd Terminal-Lyrics-Parser
-puthon3 lrc.py
+python3 lrc.py
 ```
 
 ### On Linux Distributions (Ubuntu, Fedora, Arch, etc.)
